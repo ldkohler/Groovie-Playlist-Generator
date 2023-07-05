@@ -1,0 +1,9 @@
+.drawer-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drawer-button {
+  margin-right: 1rem;
+}
+
