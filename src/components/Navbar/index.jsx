@@ -15,13 +15,26 @@ import "./index.css";
 function Navbar() {
 
   return (
-      <div className="drawer drawer-end">
-  <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
-  <div className="drawer-content">
-    <FaSpotify />
-    <label htmlFor="my-drawer-4" className="drawer-button btn btn-accent"> <FaBars /> </label>
-  </div> 
-  <div className="drawer-side">
+    <div className="drawer drawer-end">
+      <input id="my-drawer-4" type="checkbox" className="drawer-toggle" />
+      <div className="drawer-content">
+      <div className="flex items-center">
+        <div className="logo-text">
+          <span>made for </span>
+        </div>
+        <div className="flex-shrink-0 z-10">
+        <a href="https://www.spotify.com/">
+        <FaSpotify className="spotify-icon" />
+        </a>
+        </div>
+        </div>
+        <label htmlFor="my-drawer-4" className="drawer-button"> 
+        <div className="p-2">
+        <FaBars className="text-accent hover:text-accent-hover cursor-pointer menu-bars" /> 
+      </div> 
+        </label>
+      </div> 
+    <div className="drawer-side">
     <label htmlFor="my-drawer-4" className="drawer-overlay"></label>
     <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
       <li><a><FaHome /><NavLink to="/"> Home </NavLink></a></li>

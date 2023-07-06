@@ -1,9 +1,33 @@
 .drawer-content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .drawer-button {
-  margin-right: 1rem;
+  position: fixed;
+  right: 2rem; /* Adjust the right value as needed */
+  top: 1.5rem; /* 1.5rem; */
+  z-index: 1;
 }
 
+.drawer-side {
+  z-index: 1;
+}
+
+.spotify-icon {
+  color: #fff; /* Set the color to white */
+  font-size: 32px; /* Adjust the font size as desired */
+  z-index: 10;
+}
+
+.logo-text {
+  color: #a7a7a7; /* Set the color to #A7A7A7 */
+  margin-right: 0.5rem; /* Adjust the margin as desired */
+  font-size: 14px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.menu-bars {
+  font-size: 32px;
+}
