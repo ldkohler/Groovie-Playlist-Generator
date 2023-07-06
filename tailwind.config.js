@@ -5,7 +5,17 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+        'bounce-spin': 'bounce-spin 3s linear infinite',
+       },
+       translate: {
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+      }
+    },
     borderRadius: {
       'full': '9999px',
     }
