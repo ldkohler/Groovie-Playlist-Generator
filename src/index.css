@@ -1,69 +1,227 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Arial,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+html,
+body {
+  background-color: #121212;
+  padding: 0;
+  margin: 0;
+}
+html {
+  height: -webkit-fill-available;
+  height: fill-available;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+body {
+  min-height: 100%;
+  min-width: 100%;
+}
+
+#root {
+  /* min-height: 100vh; */
+  min-width: 100vw;
+}
+
+main {
+  margin: auto;
+  
+  min-height: calc(100vh - 96px);
+  max-width: 670px;
+  color: #A7A7A7;
+  position: relative;
+  font-size: 1.3em;
+  padding-inline: 2em;
+}
+
+
+h1 {
+  font-size: 2.8em;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+p {
+  color: rgb(255, 255, 255);
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  font-size: 1.25rem;
   line-height: 1.5;
-  font-weight: 400;
+  letter-spacing: 0;
+  width: 100%;
+  font-family: "Noto Sans", sans-serif;
+}
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+p a {
+  color: #1DB954;
+  text-decoration: none;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+p a:visited {
+  color: white;
+}
+
+p a:hover {
+  color: var(--accent);
+}
+
+.sub {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+#title {
+  color: rgb(255, 255, 255);
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: inherit;
+  text-align: center;
+  font-family: 'chunky', sans-serif;
+  letter-spacing: 0.1em;
+}
+
+.home-text {
+  font-size: 18px;
+  line-height: 2rem;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.home-buttons {
+  font-size: 3rem;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 20px;
+}
+
+.button {
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: rgb(255, 255, 255);
+  padding: 0.8rem 1.6rem;
+  background: var(--accent);
+  background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.button:hover {
+  background-image: linear-gradient(rgb(0 0 0/20%) 0 0);
+}
+
+.experience {
+  width: 100%;
+}
+
+.experience li:before {
+  content: \&#9670;
+  font-size: 80%;
+}
+
+.work {
+  color: var(--accent);
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 0.75em;
+  margin: 0;
+  color: white;
+}
+
+h2:hover {
+  color: var(--accent);
 }
 
 a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  text-decoration: none;
 }
 
-body {
-  margin: 0;
+.pos {
+  font-size: 0.5em;
+  color: lightgrey;
+  padding-bottom: .2em;
+}
+
+.work {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 2em;
+  padding-left: 1em;
+  border-left: 3px double lightgrey;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.point {
+  color: #bbb;
+  font-size: 0.4em;
+  line-height: 1.5;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+img {
+  margin-bottom: 0.4em;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.font-noto-sans {
+  font-family: "Noto Sans", sans-serif;
+}
+
+#content {
+  height: 100vh; /* Adjust this value to fit your needs */
+  width: 100vw;
+  transform: translateY(-60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.filter-white{
+  filter: invert(100%) sepia(0%) saturate(22%) hue-rotate(333deg) brightness(104%) contrast(105%);
+}
+
+@keyframes bounce-spin {
+  0% {
+    transform: scale(1) rotate(0deg);
   }
-  a:hover {
-    color: #747bff;
+  50% {
+    transform: scale(1.05) rotate(0deg);
   }
-  button {
-    background-color: #f9f9f9;
+  100% {
+    transform: scale(1) rotate(360deg);
   }
+}
+
+.first {
+  width: 100vw;
+  height: 100vh;
+}
+
+.second {
+  width: 100vw;
+  height: 100vh;
+  bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
