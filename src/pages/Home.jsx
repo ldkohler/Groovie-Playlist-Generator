@@ -1,32 +1,13 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Carousel from "../components/Carousel/Carousel";
 import { motion } from "framer-motion"
-import { Link } from "react-router-dom";
+import useLockScrollAtBottom from "../utils/useLockScrollAtBottom";
 
-const spinner = {
-    rotate: {
-      y: [0, 360],
-      transition: { 
-        y: {
-          repeat: Infinity,
-          duration: 2,
-          ease: "linear"
-        }
-      }
-    },
-    bounce: {
-      y: ["0%", "-10%", "0%"],
-      transition: { 
-        y: {
-          repeat: Infinity,
-          duration: 0.5,
-          ease: "easeInOut"
-        }
-      }
-    }
-  }
 
-  function handleButtonClick() {
+
+
+
+function handleButtonClick() {
     window.scrollTo({
       top: document.documentElement.scrollHeight,
       behavior: "smooth",
@@ -34,6 +15,8 @@ const spinner = {
   }
 
 function Home() {
+    useLockScrollAtBottom();
+
     return (
         <div className="page-wrapper z-0">
             <div id="content" class="first">
