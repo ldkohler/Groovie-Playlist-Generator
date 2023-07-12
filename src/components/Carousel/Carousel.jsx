@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom"; // new import
+import "./index.css";
 
 function Carousel() {
   const [selectedGenre, setSelectedGenre] = useState('');
@@ -26,7 +27,7 @@ function Carousel() {
     <div className="relative w-screen h-screen grid grid-cols-2 items-center">
     <div className="flex flex-col items-center justify-center space-y-10">
         <div className="text-4xl font-noto-sans">What's Your Movie Melody?</div>
-        <div className="text-7xl font-noto-sans">
+        <div className={`text-7xl font-noto-sans gradient-text-${selectedGenre.toLowerCase().replace(/\s/g, '-')}`}>
           <strong>{selectedGenre}</strong>
         </div>
         {selectedGenre && (
