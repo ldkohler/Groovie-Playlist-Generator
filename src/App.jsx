@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Wrapper from './pages/Wrapper'
 import Home from './pages/Home'
 import About from './pages/About'
+import Account from './pages/Account'
 import './App.css'
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path='/' element={<Wrapper />}>
           <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
+            <Route path='/setup' element={<Account />} />
         </Route>
       </Routes>
     </BrowserRouter>
