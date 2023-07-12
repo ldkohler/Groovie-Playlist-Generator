@@ -36,9 +36,22 @@ export default {
           "border-color": "#1DB954",
           "color": "#121212", // Set text color when hovered
         },
-        "accent": "#1DB954"
+        ".btn-select": {
+          "background-color": "#121212",
+          "border-color": "#ffffff",
+          "color": "#ffffff", // Set text color when normal
+        },
+        ".btn-select:hover": {
+          "background-color": "#ffffff",
+          "border-color": "#ffffff",
+          "color": "#121212", // Set text color when hovered
+        },
+        "accent": "#1DB954",
+        "primary": "#ffffff",
+        
       },
     },
+    "luxury",
   ],
   },
 }
