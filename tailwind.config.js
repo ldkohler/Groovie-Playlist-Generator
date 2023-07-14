@@ -14,7 +14,9 @@ export default {
         '1/4': '25%',
         '1/2': '50%',
         '3/4': '75%',
-      }
+      },
+      transform: ['active'],
+      scale: ['active']
     },
     borderRadius: {
       'full': '9999px',
