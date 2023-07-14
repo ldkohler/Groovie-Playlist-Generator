@@ -16,7 +16,11 @@ export default {
         '3/4': '75%',
       },
       transform: ['active'],
-      scale: ['active']
+      scale: ['active'],
+      gridTemplateColumns: {
+        // Add your custom configuration here
+        '13': 'repeat(13, minmax(0, 1fr))',
+      }
     },
     borderRadius: {
       'full': '9999px',
