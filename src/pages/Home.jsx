@@ -1,9 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Carousel from "../components/Carousel/Carousel";
 import { motion } from "framer-motion"
 import useLockScrollAtBottom from "../utils/useLockScrollAtBottom";
-
-
 
 
 
@@ -17,21 +15,37 @@ function handleButtonClick() {
 function Home() {
     useLockScrollAtBottom();
 
+    const bars = useRef([]);
+
+    useEffect(() => {
+      bars.current.forEach(item => {
+        item.style.animationDuration = `${Math.random() * (0.7 - 0.2) + 0.4}s`;
+      });
+    }, []);
+
     return (
         <div className="page-wrapper z-0">
-            <div id="content" class="first">
+            <div id="content" class="first flex flex-col items-center justify-center">
+            <h1 id="title" className="transform -translate-y-44"><strong>SpotiFilm</strong></h1>
+            <div className="sound-wave translate-y-36">
+            {Array.from({ length: 90 }, (_, i) => 
+              <div className="bar" ref={el => bars.current[i] = el} key={i}> 
+              
+              </div>
+            )}
+            
+          </div>
                 
-                <h1 id="title" className="transform translate-y-6"><strong>SpotiFilm</strong></h1>
-                <span className="sub">PLAYLISTS</span>
-                <span className="home-text uppercase transform translate-y-44">Personalized Playlists, Cinematic Vibes</span>
-                <div className="home-buttons transform translate-y-44">
+                <span className="sub -translate-y-8">PLAYLIST GENERATOR</span>
+                <span className="home-text uppercase transform translate-y-56">Personalized Playlists, Cinematic Vibes</span>
+                <div className="home-buttons transform translate-y-52">
                 <motion.img 
             src="/images/FilmReel.svg"
             onClick={handleButtonClick}
             className="cursor-pointer"
             animate={{ 
               rotate: [0, 360], 
-              y: ["0%", "-80%", "0%"]  // Adjust these values to change the size of the bounce
+              y: ["0%", "-50%", "0%"]  // Adjust these values to change the size of the bounce
             }}
             transition={{
               rotate: { 
