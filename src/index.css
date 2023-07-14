@@ -82,7 +82,7 @@ p a:hover {
 }
 
 .sub {
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 2rem;
   font-family: "Noto Sans", sans-serif;
 }
@@ -95,6 +95,7 @@ p a:hover {
   text-align: center;
   font-family: 'chunky', sans-serif;
   letter-spacing: 0.1em;
+  position: absolute;
 }
 
 .home-text {
@@ -224,4 +225,72 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.waves {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.sound-wave {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bar {
+  animation-name: wave-lg;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  background: #1DB954;
+  margin: 0 5px;
+  height: 10px;
+  width: 5px;
+}
+
+.bar:nth-child(-n + 7),
+.bar:nth-last-child(-n + 7) {
+  animation-name: wave-md;
+}
+
+.bar:nth-child(-n + 3),
+.bar:nth-last-child(-n + 3) {
+  animation-name: wave-sm;
+}
+
+@keyframes wave-sm {
+  0% {
+    opacity: 0.35;
+    height: 20px;
+  }
+  100% {
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+@keyframes wave-md {
+  0% {
+    opacity: 0.35;
+    height: 30px;
+  }
+  100% {
+    opacity: 1;
+    height: 100px;
+  }
+}
+
+@keyframes wave-lg {
+  0% {
+    opacity: 0.35;
+    height: 30px;
+  }
+  100% {
+    opacity: 1;
+    height: 140px;
+  }
 }
