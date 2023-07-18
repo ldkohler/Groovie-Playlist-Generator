@@ -15,8 +15,8 @@ function SpotifyLogin() {
 
         <p className="w-full tracking-wide translate-y-40"> CONNECT YOUR SPOTIFY ACCOUNT SO SPOTIFILM PLAYLIST GENERATOR CAN DISCOVER YOUR MUSIC TASTE. </p>
 
-        <div>
-                <Link to='/' className='btn btn-lg btn-outline btn-spotify tracking-wide w-login rounded-full text-xl translate-y-52 font-noto-sans'>
+        <div className="translate-y-52">
+                <Link to='/' className='btn btn-lg btn-outline btn-spotify tracking-wide w-login rounded-full text-xl font-noto-sans'>
                 <FaSpotify className="text-3xl" />{'\u00A0'}CONNECT WITH SPOTIFY
                 </Link>
             </div>
