@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import { Outlet } from "react-router-dom";
 
 
@@ -14,7 +13,6 @@ function Wrapper() {
         <main >
           <Outlet />
         </main>
-        {/* <Footer/> */}
       </div>
     );
   }
