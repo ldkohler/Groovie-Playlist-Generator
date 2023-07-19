@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./index.css";
 
 function Footer() {
@@ -6,8 +7,8 @@ function Footer() {
     <footer>
       <div className="footer-icons">
         <p id="footer-p">
-          Send me an email at{" "}
-          <a href="mailto:zeq5dh@virginia.edu">zeq5dh@virginia.edu</a>
+          Made by{" "}
+          <a href="mailto:zeq5dh@virginia.edu">Lucas Kohler</a> | <Link to='/privacy'> Privacy Policy </Link>
         </p>
       </div>
     </footer>
