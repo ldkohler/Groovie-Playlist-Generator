@@ -1,5 +1,6 @@
-import React, { useEffect, useRef } from "react";
-import Carousel from "../components/Carousel/Carousel";
+import React, { useState, useEffect, useRef } from "react";
+import Carousel from "../components/Carousel";
+import SpotifyLogin from "./SpotifyLogin";
 import { motion } from "framer-motion"
 import useLockScrollAtBottom from "../utils/useLockScrollAtBottom";
 
@@ -13,7 +14,33 @@ function handleButtonClick() {
   }
 
 function Home() {
+    const [blur, setBlur] = useState(10); // Maximum blur at the beginning
+
     useLockScrollAtBottom();
+
+    const handleScroll = () => {
+      // Calculate the total scrollable height.
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+      // Get current scroll position.
+      const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+      // Calculate new blur value.
+      const newBlur = Math.max(10 * (1 - scrollPosition / scrollableHeight), 0);
+
+      // Update the blur state.
+      setBlur(newBlur);
+  };
+
+  useEffect(() => {
+      // Attach the scroll event handler.
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+          // Clean up the scroll event handler.
+          window.removeEventListener('scroll', handleScroll);
+      }
+  }, []);
 
     const bars = useRef([]);
 
@@ -26,7 +53,7 @@ function Home() {
     return (
         <div className="page-wrapper z-0">
             <div id="content" class="first flex flex-col items-center justify-center">
-            <h1 id="title" className="transform -translate-y-44"><strong>SpotiFilm</strong></h1>
+            <h1 id="title" className="transform -translate-y-44"><strong>GROOVIE</strong></h1>
             <div className="sound-wave translate-y-36">
             {Array.from({ length: 90 }, (_, i) => 
               <div className="bar" ref={el => bars.current[i] = el} key={i}> 
@@ -62,7 +89,7 @@ function Home() {
           />
             </div>
             </div>
-            <div class="second">
+            <div className="second" style={{filter: `blur(${blur}px)`}}>
                 <Carousel />
             </div>
         </div>
