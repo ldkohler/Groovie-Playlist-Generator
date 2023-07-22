@@ -12,7 +12,7 @@ function Privacy() {
             </p>
 
             <p>
-            None of the data used by Receiptify is stored or collected anywhere, and it is NOT shared with 
+            None of the data used by Groovie is stored or collected anywhere, and it is NOT shared with 
             any third parties. All information is used solely for generating your playlist.
             </p>
       
