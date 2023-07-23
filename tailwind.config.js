@@ -53,7 +53,7 @@ export default {
           "border-color": "#ffffff",
           "color": "#121212", // Set text color when hovered
         },
-        "accent": "#1DB954",
+        "accent": "#F9F3F8",
         "primary": "#ffffff",
         
       },
