@@ -1,26 +1,25 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Wrapper from './pages/Wrapper'
 import Home from './pages/Home'
+import SpotifyLogin from './pages/SpotifyLogin'
 import About from './pages/About'
-import Account from './pages/Account'
+import Privacy from './pages/Privacy'
 import './App.css'
 
 function App() {
-  
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
         <Route path='/' element={<Wrapper />}>
-          <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/setup' element={<Account />} />
+          <Route index element={<Home />} />
+          <Route path='login' element={<SpotifyLogin />} />
+          <Route path='about' element={<About />} />
+          <Route path='privacy' element={<Privacy />} />
         </Route>
       </Routes>
-    </BrowserRouter>
-  );
+    </Router>
+  )
 }
-
-
 
 export default App
