@@ -3,6 +3,14 @@ import React from "react";
 function Privacy() {
         return (
           <div className="page-wrapper">
+          <div className="sound-wave translate-y-36">
+            {Array.from({ length: 90 }, (_, i) => 
+              <div className="bar" ref={el => bars.current[i] = el} key={i}> 
+              
+              </div>
+            )}
+            
+            </div>
             <div>
             <h1><strong>Privacy Policy</strong></h1>
             <p>
