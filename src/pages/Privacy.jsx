@@ -6,7 +6,7 @@ function Privacy() {
             <div>
             <h1><strong>Privacy Policy</strong></h1>
             <p>
-            Spotify was developed as an open source app powered by the Spotify Web API. 
+            Groovie was developed as an open source app powered by the Spotify Web API. 
             By choosing to use this app, you agree to the use of your Spotify account username and data for 
             your top artists and tracks.
             </p>
