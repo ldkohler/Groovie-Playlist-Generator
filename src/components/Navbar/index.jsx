@@ -30,7 +30,7 @@ function Navbar() {
         </div>
         <label htmlFor="my-drawer-4" className="drawer-button"> 
         <div className="p-2">
-        <FaBars className="text-accent hover:text-accent-hover cursor-pointer menu-bars" /> 
+        <FaBars className="text-accent hover:text-accent-hover active:scale-90 transition-transform duration-200 ease-in-out cursor-pointer menu-bars" /> 
       </div> 
         </label>
       </div> 
